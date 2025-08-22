@@ -229,9 +229,9 @@ Explore → [Advanced Hardware](#advanced-hardware) → [Embedded Security](#emb
     - [Timer Wheel](./Data_Struct_Implementation/timerWheel/)
     - [Task Scheduler](./Data_Struct_Implementation/taskScheduler/)
     - [Concurrency Patterns](./Data_Struct_Implementation/concurrency/)
-- **Advanced Analysis**
-  - Advanced code coverage analysis and metrics
-  - Advanced static analysis tools and techniques
+  - **Advanced Analysis**
+    - Advanced code coverage analysis and metrics
+    - Advanced static analysis tools and techniques
 
 ### **Specialized Domains & Advanced Topics** 🔧
 
@@ -242,9 +242,9 @@ Explore → [Advanced Hardware](#advanced-hardware) → [Embedded Security](#emb
 - **Process Management** - [Process creation, scheduling, inter-process communication](./Operating_System/Process_Management.md)
 - **Device Drivers** - [Character drivers, block drivers, network drivers](./Operating_System/Device_Drivers.md)
 - **System Programming** - POSIX APIs, system calls, signal handling
-    - **Multi-threading** - [pthread programming, thread synchronization](./Operating_System/Multi_threading.md)
-    - **Real-time Linux** - [PREEMPT_RT, Xenomai, real-time extensions](./Operating_System/Real_time_Linux.md)
-    - **Embedded Linux** - [Buildroot, Yocto, custom distributions](./Operating_System/Embedded_Linux.md)
+- **Multi-threading** - [pthread programming, thread synchronization](./Operating_System/Multi_threading.md)
+- **Real-time Linux** - [PREEMPT_RT, Xenomai, real-time extensions](./Operating_System/Real_time_Linux.md)
+- **Embedded Linux** - [Buildroot, Yocto, custom distributions](./Operating_System/Embedded_Linux.md)
 
 #### **Real-Time Systems & RTOS**
 - **FreeRTOS Fundamentals** - [FreeRTOS Basics](./Real_Time_Systems/FreeRTOS_Basics.md)
@@ -262,13 +262,13 @@ Explore → [Advanced Hardware](#advanced-hardware) → [Embedded Security](#emb
 - **Memory Systems** - [Memory Systems](./Computer_architecture/Memory_Systems.md)
 - **Direct Memory Access** - [Direct Memory Access (DMA)](./Computer_architecture/Direct_Memory_Access.md)
 - **CPU Architecture** - [ARM, x86, RISC-V, instruction sets](./Computer_architecture/CPU_Architecture.md)
-                  - **Memory Hierarchy** - [Cache levels, virtual memory, TLB](./Computer_architecture/Memory_Hierarchy.md)
-                  - **Pipeline Architecture** - [Instruction pipelining, hazards, forwarding](./Computer_architecture/Pipeline_Architecture.md)
-                  - **Multi-core Systems** - [Cache coherency, inter-core communication](./Computer_architecture/Multi_core_Systems.md)
-                  - **Vector Processing** - [SIMD instructions, vectorization](./Computer_architecture/Vector_Processing.md)
-                  - **Floating Point** - [IEEE 754, FPU programming, precision](./Computer_architecture/Floating_Point.md)
-                  - **Memory Ordering** - [Memory barriers, atomic operations](./Computer_architecture/Memory_Ordering.md)
-                  - **Performance Counters** - [CPU profiling, performance monitoring](./Computer_architecture/Performance_Counters.md)
+- **Memory Hierarchy** - [Cache levels, virtual memory, TLB](./Computer_architecture/Memory_Hierarchy.md)
+- **Pipeline Architecture** - [Instruction pipelining, hazards, forwarding](./Computer_architecture/Pipeline_Architecture.md)
+- **Multi-core Systems** - [Cache coherency, inter-core communication](./Computer_architecture/Multi_core_Systems.md)
+- **Vector Processing** - [SIMD instructions, vectorization](./Computer_architecture/Vector_Processing.md)
+- **Floating Point** - [IEEE 754, FPU programming, precision](./Computer_architecture/Floating_Point.md)
+- **Memory Ordering** - [Memory barriers, atomic operations](./Computer_architecture/Memory_Ordering.md)
+- **Performance Counters** - [CPU profiling, performance monitoring](./Computer_architecture/Performance_Counters.md)
 
 #### **Embedded C Programming**
 - **Language Fundamentals** - [C Language Fundamentals](./Embedded_C/C_Language_Fundamentals.md)
@@ -327,7 +327,38 @@ Explore → [Advanced Hardware](#advanced-hardware) → [Embedded Security](#emb
 
 ### **Interview Preparation** 🎯
 
-#### **Coding Questions**
+> **Comprehensive interview preparation for embedded software engineers at all levels**
+
+#### **🎯 [Complete Interview Preparation Guide](./Interview_Preparation/README.md)**
+
+**Foundation Level Interview Prep**
+- **[C Programming Interview](./Interview_Preparation/Foundation_Level/C_Programming_Interview.md)** - Memory management, pointers, volatile/const qualifiers
+- **[Basic Hardware Interview](./Interview_Preparation/Foundation_Level/Basic_Hardware_Interview.md)** - GPIO, interrupts, timers, communication protocols
+- **[Problem-Solving Approach](./Interview_Preparation/Foundation_Level/Problem_Solving_Approach.md)** - Systematic problem-solving strategies and common patterns
+
+**Intermediate Level Interview Prep**
+- **[Real-Time Systems Interview](./Interview_Preparation/Intermediate_Level/Real_Time_Systems_Interview.md)** - RTOS concepts, task scheduling, interrupt handling
+- **[Communication Protocols Interview](./Interview_Preparation/Intermediate_Level/Communication_Protocols_Interview.md)** - Protocol selection, error handling, multi-protocol systems
+- **[System Integration Interview](./Interview_Preparation/Intermediate_Level/System_Integration_Interview.md)** - Bootloaders, firmware updates, build systems
+
+**Advanced Level Interview Prep**
+- **[Performance Optimization Interview](./Interview_Preparation/Advanced_Level/Performance_Optimization_Interview.md)** - Code optimization, memory optimization, power optimization
+- **[Advanced Hardware Interview](./Interview_Preparation/Advanced_Level/Advanced_Hardware_Interview.md)** - Multi-core programming, DMA, cache management, PCB design
+- **[Embedded Security Interview](./Interview_Preparation/Advanced_Level/Embedded_Security_Interview.md)** - Secure boot, cryptography, side-channel attacks
+
+**Specialized Domains Interview Prep**
+- **[Industry Protocols Interview](./Interview_Preparation/Specialized_Domains/Industry_Protocols_Interview.md)** - Automotive (CAN, LIN), Industrial (Modbus, Profinet), IoT protocols
+- **[Operating Systems Interview](./Interview_Preparation/Specialized_Domains/Operating_Systems_Interview.md)** - Linux kernel, device drivers, real-time Linux
+- **[IoT & Wireless Interview](./Interview_Preparation/Specialized_Domains/IoT_Wireless_Interview.md)** - Bluetooth, WiFi, Zigbee, LoRa, MQTT
+
+**Interview Strategy & Preparation**
+- **[Technical Interview Guide](./Interview_Preparation/Interview_Strategy/Technical_Interview_Guide.md)** - Interview formats, preparation strategies, common pitfalls
+- **[Problem-Solving Framework](./Interview_Preparation/Interview_Strategy/Problem_Solving_Framework.md)** - Systematic approach to technical problems
+- **[Mock Interviews](./Interview_Preparation/Interview_Strategy/Mock_Interviews.md)** - Practice scenarios and self-assessment
+
+#### **Quick Reference: Common Interview Topics**
+
+**Coding Questions**
 - **Bit Manipulation Problems** - Bit operations, bit counting, bit manipulation tricks
 - **Dynamic Programming** - Memoization, tabulation, optimization problems
 - **Graph Algorithms** - DFS, BFS, shortest path, minimum spanning tree
@@ -339,7 +370,7 @@ Explore → [Advanced Hardware](#advanced-hardware) → [Embedded Security](#emb
 - **Greedy Algorithms** - Optimal local choices, greedy strategies
 - **Binary Search** - Search in sorted arrays, binary search variations
 
-#### **Concept Questions**
+**Concept Questions**
 - **Memory Management Questions** - Memory allocation, fragmentation, memory leaks
 - **Interrupt Questions** - Interrupt handling, priority, nested interrupts
 - **RTOS Questions** - Task scheduling, synchronization, deadlock prevention
@@ -352,7 +383,7 @@ Explore → [Advanced Hardware](#advanced-hardware) → [Embedded Security](#emb
 - **Real-time Systems Questions** - Deadline management, response time analysis
 - **Computer Architecture Questions** - Cache, pipeline, memory hierarchy
 
-#### **System Design**
+**System Design**
 - **Embedded System Design** - Microcontroller selection, sensor integration
 - **Real-time System Design** - Task scheduling, deadline management
 - **IoT System Design** - Sensor networks, cloud integration, edge computing
