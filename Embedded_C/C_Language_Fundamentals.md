@@ -144,22 +144,22 @@ C is primarily a **procedural programming language**, which means:
 
 ### **Memory Model**
 
-C uses a **static memory model** with manual memory management:
+C defines an abstract machine; the actual memory layout is implementation-defined. Embedded targets typically place code in Flash/ROM and data in RAM, and the linker script controls section placement.
 
 ```
-C Memory Layout:
+Typical Embedded Memory Layout (varies by target/toolchain):
 ┌─────────────────────────────────────────────────────────────┐
 │                    Stack (Local Variables)                 │
-│                    ↓ Grows downward                       │
+│                    ↓ Often grows downward                 │
 ├─────────────────────────────────────────────────────────────┤
 │                    Heap (Dynamic Memory)                  │
-│                    ↑ Grows upward                         │
+│                    ↑ Often grows upward                   │
 ├─────────────────────────────────────────────────────────────┤
-│                    .bss (Uninitialized Data)              │
+│                    .bss (Zero-initialized Data)            │
 ├─────────────────────────────────────────────────────────────┤
-│                    .data (Initialized Data)               │
+│                    .data (Initialized Data)                │
 ├─────────────────────────────────────────────────────────────┤
-│                    .text (Code)                           │
+│                    .text/.rodata (Code/Const)              │
 └─────────────────────────────────────────────────────────────┘
 ```
 
@@ -203,10 +203,10 @@ C uses a **static type system** with **weak typing**:
 ### **Scope and Lifetime**
 
 **Scope Rules:**
-- **File Scope**: Variables declared outside functions
-- **Function Scope**: Variables declared inside functions
-- **Block Scope**: Variables declared inside code blocks
-- **Global Scope**: Variables accessible throughout the program
+- **File Scope**: Identifiers declared outside any function
+- **Block Scope**: Identifiers declared inside `{}` blocks (including function bodies)
+- **Prototype Scope**: Parameter names in function prototypes
+- **Function Scope**: Labels only (used with `goto`)
 
 **Lifetime Rules:**
 - **Automatic**: Local variables (stack-based)
@@ -306,8 +306,8 @@ long     also_variable;       // Size varies by platform
 
 #### **Floating Point Types**
 ```c
-float    single_precision;    // 32-bit IEEE 754
-double   double_precision;    // 64-bit IEEE 754 (avoid in embedded)
+float    single_precision;    // Typically 32-bit IEEE 754
+double   double_precision;    // Implementation-defined (32 or 64-bit)
 ```
 
 #### **Character Types**
@@ -623,9 +623,9 @@ Memory management in C involves allocating, using, and freeing memory resources.
 
 **Memory Types:**
 - **Stack Memory**: Automatic allocation for local variables
-- **Heap Memory**: Dynamic allocation with malloc/free
-- **Static Memory**: Global and static variables
-- **Constant Memory**: Read-only data and code
+- **Heap Memory**: Dynamic allocation with malloc/free (if enabled)
+- **Static Storage**: Global and static variables
+- **Flash/ROM**: Read-only code and const data (platform concept)
 
 **Memory Lifecycle:**
 - **Allocation**: Requesting memory from the system
@@ -765,7 +765,7 @@ An array name in an expression decays to a pointer to its first element. The arr
 
 ### Why it matters in embedded
 - Knowing when decay happens prevents bugs with `sizeof` and parameter passing.
-- Arrays placed in Flash as `static const` look like ordinary arrays but are read‑only and may require `volatile` when mapped to hardware.
+- Arrays placed in Flash as `static const` look like ordinary arrays but are read‑only; use `volatile` only for memory‑mapped registers or data changed by hardware/ISRs.
 
 ### Minimal example: decay and sizeof
 ```c
@@ -959,6 +959,7 @@ typedef union {
     uint8_t raw[34];
 } protocol_message_t;
 ```
+> Note: Type-punning through unions is implementation-defined in C. For strict portability, use `memcpy` to move between object representations.
 
 ## 🔧 **Preprocessor Directives**
 
@@ -1293,8 +1294,9 @@ ptr = NULL;  // Prevent use-after-free
 - **GDB**: GNU Debugger
 
 ### **Standards**
-- **C11**: Current C language standard
-- **C99**: Previous C language standard
+- **C11**: Widely used in embedded toolchains
+- **C17/C18**: Bug-fix revision of C11
+- **C23**: Latest ISO C standard (toolchain support varies)
 - **MISRA C**: Safety-critical coding standard
 
 ---

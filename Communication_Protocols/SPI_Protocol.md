@@ -32,6 +32,11 @@ Serial Peripheral Interface (SPI) is a synchronous serial communication protocol
 - **Chip select management** - Individual slave selection
 - **Configurable clock modes** - Flexible timing requirements
 
+### **Interviewer intent (what they’re probing)**
+- Can you explain CPOL/CPHA and timing setup/hold?
+- Do you know how chip‑select timing affects multi‑slave buses?
+- Can you reason about throughput vs CPU/DMA trade‑offs?
+
 ## 🤔 **What is SPI Protocol?**
 
 SPI protocol is a synchronous serial communication standard that enables high-speed data exchange between a master device (typically a microcontroller) and one or more slave devices (peripherals such as sensors, memory chips, displays, etc.). It uses a shared clock signal to synchronize data transmission, ensuring reliable and efficient communication.

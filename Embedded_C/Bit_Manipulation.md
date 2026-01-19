@@ -55,6 +55,11 @@ static inline void reg_set_mode(uint32_t mode) {
 - Define `*_Pos` and `*_Msk` macros or enums; avoid magic numbers.
 - Document endianness where on-wire vs in-memory order differs.
 
+### Interviewer intent (what they’re probing)
+- Can you update a bitfield without breaking neighbors?
+- Do you understand UB around shifts and signed types?
+- Can you reason about endianness and on-wire layouts?
+
 ---
 
 ## 🧪 Guided Labs

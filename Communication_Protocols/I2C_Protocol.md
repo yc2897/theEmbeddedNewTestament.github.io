@@ -32,6 +32,11 @@ I2C (Inter-Integrated Circuit) is a synchronous, multi-master, multi-slave, pack
 - **Clock stretching** - Slaves can slow down communication
 - **Arbitration** - Non-destructive arbitration for bus access
 
+### **Interviewer intent (what they’re probing)**
+- Can you explain open‑drain + pull‑ups and rise‑time limits?
+- Do you understand arbitration and clock stretching behavior?
+- Can you reason about bus speed vs capacitance?
+
 ## 🤔 **What is I2C Protocol?**
 
 I2C protocol is a synchronous serial communication standard that enables multiple devices to communicate over a shared two-wire bus. It uses a master-slave architecture with support for multiple masters, making it ideal for connecting multiple integrated circuits, sensors, and peripheral devices in embedded systems.

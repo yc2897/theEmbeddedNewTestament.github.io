@@ -46,6 +46,11 @@ GPIO (General Purpose Input/Output) is the foundation of embedded system I/O. Un
 - **Electrical Characteristics**: Drive strength, slew rate, voltage levels
 - **Interrupt Capability**: Edge/level triggered interrupts
 
+### **Interviewer intent (what they’re probing)**
+- Can you map a datasheet pin mode to the right register settings?
+- Do you understand electrical limits (drive, pull-ups, voltage)?
+- Can you explain safe startup defaults and failure modes?
+
 ### **🔍 Visual Understanding**
 
 #### **GPIO Pin Configuration Structure**

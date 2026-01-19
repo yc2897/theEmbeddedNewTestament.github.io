@@ -33,6 +33,11 @@ UART (Universal Asynchronous Receiver/Transmitter) is a widely used serial commu
 - **Error Detection**: Parity checking, frame errors, overrun detection
 - **Flow Control**: Hardware and software flow control mechanisms
 
+### **Interviewer intent (what they’re probing)**
+- Can you explain framing, baud tolerance, and typical errors?
+- Do you know when to use hardware vs software flow control?
+- Can you design a robust RX/TX buffering strategy?
+
 ---
 
 ## 🧠 **Concept First**

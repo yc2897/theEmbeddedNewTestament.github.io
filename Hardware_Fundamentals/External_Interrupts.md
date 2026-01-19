@@ -46,6 +46,11 @@ Choose edges to capture transitions; levels to detect sustained conditions. Alwa
 - **Interrupt Latency** - Time from interrupt occurrence to handler execution
 - **Debouncing** - Eliminating false triggers from mechanical switches
 
+### **Interviewer intent (what they’re probing)**
+- Can you choose edge vs level correctly and explain why?
+- Do you know how to keep ISRs short and safe?
+- Can you reason about latency, priority, and masking?
+
 ---
 
 ## 🔍 Visual Understanding

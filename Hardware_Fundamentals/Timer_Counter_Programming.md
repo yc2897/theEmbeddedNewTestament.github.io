@@ -33,6 +33,11 @@ Timers and counters are essential peripherals in embedded systems for precise ti
 - **Interrupts**: Timer interrupts for precise timing events
 - **DMA Integration**: High-speed data transfer without CPU intervention
 
+### **Interviewer intent (what they’re probing)**
+- Can you compute timer frequency/period from clock and prescaler?
+- Do you understand capture vs compare use cases?
+- Can you reason about jitter, ISR cost, and DMA trade‑offs?
+
 ---
 
 ## 🔍 **Visual Understanding**

@@ -40,6 +40,11 @@ void add_buffers(uint16_t* restrict a, const uint16_t* restrict b, size_t n){
 - Be mindful of strict aliasing; stick to the same effective type or `memcpy`.
 - Prefer `restrict` only when you can prove non-aliasing.
 
+### Interviewer intent (what they’re probing)
+- Can you explain lifetime, aliasing, and safe access patterns?
+- Do you know when to use `volatile` vs `const` vs `restrict`?
+- Can you reason about pointer decay and address arithmetic?
+
 ---
 
 ## 🧪 Guided Labs

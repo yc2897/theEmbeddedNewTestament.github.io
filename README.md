@@ -279,9 +279,7 @@ Master → [Advanced Hardware](#advanced-hardware) → [Security](#embedded-secu
 
 ---
 
-## 🎯 **Interview Preparation Strategy**
-
-### **📚 Study Schedule by Experience Level**
+## 📚 **Study Schedule by Experience Level**
 
 #### **For Entry-Level Positions (0-2 years)**
 1. **Week 1-2**: Master [C Programming Mastery](#c-programming-mastery) - Focus on pointers, memory management
@@ -304,7 +302,7 @@ Master → [Advanced Hardware](#advanced-hardware) → [Security](#embedded-secu
 4. **Week 4**: Focus on [Specialized Domains](#specialized-domains-domain-specific-knowledge) relevant to target role
 5. **Week 5**: System design practice and leadership scenario preparation
 
-### **🔥 Most Frequently Asked Interview Questions**
+## 🔥 **Most Frequently Asked Interview Questions**
 
 1. **"Explain volatile keyword"** → [Type Qualifiers](./Embedded_C/Type_Qualifiers.md)
 2. **"Difference between stack and heap"** → [Memory Management](./Embedded_C/Memory_Management.md)
@@ -317,7 +315,7 @@ Master → [Advanced Hardware](#advanced-hardware) → [Security](#embedded-secu
 9. **"Bootloader design"** → [Bootloader Development](./System_Integration/Bootloader_Development.md)
 10. **"Debugging embedded systems"** → [JTAG/SWD Debugging](./Debugging/JTAG_SWD_Debugging.md)
 
-### **🎯 Success Tips for Embedded Software Interviews**
+## 🎯 **Success Tips for Embedded Software Interviews**
 
 #### **Technical Preparation**
 - **Practice on whiteboards/paper** - Many embedded interviews don't use computers

@@ -49,6 +49,11 @@ static inline uint32_t periph_ready(void) { return (PERIPH->STAT & 1u) != 0u; }
 - Be explicit about read-only/write-only semantics via `const` on `volatile` fields.
 - Consider memory barriers for ordering on platforms that require them.
 
+### Interviewer intent (what they’re probing)
+- Can you model registers safely and clearly in C?
+- Do you know why `volatile` matters and what it doesn’t solve?
+- Can you explain read‑modify‑write hazards and ordering?
+
 ---
 
 ## 🧪 Guided Labs

@@ -53,6 +53,11 @@ void copy_fast(uint8_t * restrict dst, const uint8_t * restrict src, size_t n);
 - `const` expresses intent and may change placement; don’t cast it away to write.
 - Use `restrict` only when you can prove no aliasing.
 
+### Interviewer intent (what they’re probing)
+- Do you know when `volatile` is required and when it is insufficient?
+- Can you explain how `const` affects placement and safety?
+- Do you understand aliasing and when `restrict` is valid?
+
 > Platform note: For I/O ordering on some MCUs/SoCs, pair volatile accesses with memory barriers when required by the architecture.
 
 ---
