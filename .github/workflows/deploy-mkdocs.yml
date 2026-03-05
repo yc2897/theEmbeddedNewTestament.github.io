@@ -27,7 +27,5 @@ jobs:
       - name: Deploy to GitHub Pages
         run: |
           cd sys_config
-          pip install mkdocs-with-pdf
-          pip install weasyprint==61.2
-          pip install mkdocs-with-pdf
+          pip install mkdocs-with-pdf pydyf==0.8.0 weasyprint==61.2
           mkdocs gh-deploy --force
