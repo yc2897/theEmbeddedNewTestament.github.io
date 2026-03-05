@@ -10,6 +10,7 @@ permissions:
 
 jobs:
   deploy:
+    timeout-minutes: 60
     runs-on: ubuntu-latest
     steps:
       - name: Checkout repository
@@ -26,4 +27,7 @@ jobs:
       - name: Deploy to GitHub Pages
         run: |
           cd sys_config
+          pip install mkdocs-with-pdf
+          pip install weasyprint==61.2
+          pip install mkdocs-with-pdf
           mkdocs gh-deploy --force

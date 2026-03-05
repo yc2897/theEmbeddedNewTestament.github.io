@@ -36,6 +36,12 @@ theme:
 plugins:
   - search
   - awesome-pages
+  - with-pdf:
+      cover_title: "The Embedded New Testament"
+      cover_subtitle: "The Ultimate Interview Preparation Guide"
+      toc_title: "Table of Contents"
+      output_path: "pdf/The_Embedded_New_Testament.pdf"
+      author: "theEmbeddedGeorge"
 
 markdown_extensions:
   - admonition
@@ -52,3 +58,9 @@ validation:
     absolute_links: relative_to_docs
     unrecognized_links: warn
     not_found: warn
+
+extra:
+  social:
+    - icon: fontawesome/solid/file-pdf
+      link: pdf/The_Embedded_New_Testament.pdf
+      name: Download as PDF
