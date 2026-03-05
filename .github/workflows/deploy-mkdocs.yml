@@ -1,0 +1,29 @@
+name: Deploy MkDocs Documentation
+on:
+  push:
+    branches:
+      - master
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: 3.x
+
+      - name: Install Dependencies
+        run: pip install mkdocs mkdocs-material mkdocs-awesome-pages-plugin
+
+      - name: Deploy to GitHub Pages
+        run: |
+          cd sys_config
+          mkdocs gh-deploy --force
