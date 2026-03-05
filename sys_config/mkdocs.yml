@@ -1,0 +1,66 @@
+site_name: The Embedded New Testament
+site_description: The "Holy Bible" for embedded engineers
+site_author: theEmbeddedGeorge
+
+# Set docs_dir to the parent directory (the root of the repo)
+docs_dir: '../'
+
+# Put the generated site outside the repo entirely
+site_dir: '/tmp/theEmbeddedNewTestament_site'
+
+theme:
+  name: material
+  features:
+    - navigation.tabs
+    - navigation.indexes
+    - navigation.top
+    - search.suggest
+    - search.highlight
+    - content.code.copy
+  palette:
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
+      primary: indigo
+      accent: indigo
+      toggle:
+        icon: material/brightness-7
+        name: Switch to dark mode
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      primary: indigo
+      accent: indigo
+      toggle:
+        icon: material/brightness-4
+        name: Switch to light mode
+
+plugins:
+  - search
+  - awesome-pages
+  - with-pdf:
+      cover_title: "The Embedded New Testament"
+      cover_subtitle: "The Ultimate Interview Preparation Guide"
+      toc_title: "Table of Contents"
+      output_path: "pdf/The_Embedded_New_Testament.pdf"
+      author: "theEmbeddedGeorge"
+
+markdown_extensions:
+  - admonition
+  - pymdownx.details
+  - pymdownx.superfences
+  - pymdownx.highlight:
+      anchor_linenums: true
+  - pymdownx.inlinehilite
+  - pymdownx.snippets
+
+# Try to silence the warnings for missing files as requested earlier
+validation:
+  links:
+    absolute_links: relative_to_docs
+    unrecognized_links: warn
+    not_found: warn
+
+extra:
+  social:
+    - icon: fontawesome/solid/file-pdf
+      link: pdf/The_Embedded_New_Testament.pdf
+      name: Download as PDF
